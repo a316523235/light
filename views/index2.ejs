@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%include header.ejs %>
+</head>
+<body>
+    <!--
+    <h1><%= name %></h1>
+    <p>Welcome to <%= title %></p>
+    -->
+    <div class="row-offcanvas row-offcanvas-left">
+        <%include menuleft.ejs %>
+        <div class="row-offcanvas-main">
+            <div class="container">
+                <div class="wrapper">
+                    <!-- Begin toolbar -->
+                    <!-- End toolbar -->
+                    <!-- Begin Header -->
+                    <%include header2.ejs %>
+                    <!-- End Header -->
+                    <!-- Begin content-->
+                    <section id="content">
+                        <div class="products">
+                            <div class="row">
+                            <%if(lstProduct.length) { %>
+                                <%lstProduct.forEach(function(product) { %>
+                                <div class="product col-xs-6  col-sm-3 col-md-2">
+                                    <div class="image">
+                                        <a href="https://www.fatshackvintage.com.au/products/station-pendant-light">
+                                            <img src="/uploads/<%=product.image%>" alt="Copper Station Pendant Light matt copper finish">
+                                        </a>
+                                        <div class="details">
+                                            <a href="https://www.fatshackvintage.com.au/products/station-pendant-light" class="clearfix">
+                                                <h4 class="title"><%=product.title%></h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <%}) %>
+                            <%} %>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

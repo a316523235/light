@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <title>Dashboard - Ace Admin</title>
+    <%include ../adminheader.ejs%>
+</head>
+<body class="no-skin">
+    <%include ../adminnavbar.ejs%>
+
+    <div class="main-container" id="main-container">
+        <%include ../adminsidebar.ejs%>
+
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="page-content">
+                    <div class="page-he<r">
+                        <h1>
+                            上传图片
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <form id="addForm" action="" method="post" enctype="multipart/form-data">
+                                        <div class="form-horizontal" role="form" id="form-banner">
+
+                                            <div class="form-group" style="display: <%=result.hide%>">
+                                                <label class="col-xs-4 control-label no-padding-right"> 上传结果： </label>
+                                                <div class="col-sm-6">
+                                                    <span id="alert5" class="red col-xs-9" style="margin-top: 7px;"><%=result.msg%></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="display: <%=result.hide%>">
+                                                <label class="col-xs-4 control-label no-padding-right"> 图片地址： </label>
+                                                <div class="col-sm-6">
+                                                    <span id="alert5" class="red col-xs-9" style="margin-top: 7px;"><%=result.imageUrl%></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-xs-4 control-label no-padding-right"> 图片地址： </label>
+                                                <div class="col-sm-6">
+                                                    <input type="file" name="image" id="image" class="file" />
+                                                    <span id="alert5" class="red col-xs-9" style="margin-top: 7px;"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-4 col-md-6">
+                                <button class="btn btn-info" type="button" onclick="fileSubmit()">
+                                    保存
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#image').ace_file_input({
+                uploadUrl: '/picture/add',
+                allowedFileExtensions: ['jpg', 'png', 'gif'],
+                maxfileCount: 1,
+                enctype: 'multipart/form-data',
+                showUpload: true,
+                showCaption: false,
+                browseClass: 'btn btn-primary',
+                previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+                msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+            }).on("filebatchselected", function (event, files) {
+                $(this).fileinput("upload");
+            }).on("fileuploaded", function (event, data) {
+                if (data.response) {
+                    alert('处理成功');
+                }
+            });
+        });
+        function fileSubmit() {
+            $("#addForm").submit();
+        }
+    </script>
+</body>
+</html>
+

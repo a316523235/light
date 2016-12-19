@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/ace.css">
+
+
+
+    <script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/ace.js"></script>
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/Content/css/ace-part2.css" class="ace-main-stylesheet"
+        />
+    <![endif]-->
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/Content/css/ace-ie.css" />
+    <![endif]-->
+</head>
+<body class="no-skin">
+    <div id="navbar" class="navbar navbar-default">
+        <div class="navbar-container" id="navbar-container">
+            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                <span class="sr-only">Toggle sidebar</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header pull-left">
+                <a href="/" class="navbar-brand" style="width:180px">
+                    <small>
+                        灵感管理中心
+                    </small>
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="font-size:18px;">
+                        我的工作台
+                        <i class="ace-icon fa fa-angle-down bigger-110"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-light-blue dropdown-caret">
+                        <li>
+                            <a href="/System">
+                                <i class="ace-icon fa fa-user bigger-110 blue"></i>
+                                系统设置
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/GoodsManage">
+                                <i class="ace-icon fa fa-film bigger-110 blue"></i>
+                                报名管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Topic/TopicManager">
+                                <i class="ace-icon fa fa-cog bigger-110 blue"></i>
+                                内容管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://192.168.1.8:8080/crm/Login/SaveToken?token=LyHbMp6d%2btmpq142ew80vfBCP4h4Fc1Kz4dQCIgTc3j2XZawzKNuAG6ifYhrGCjQUakdoOQ1%2bFNj8y6gisq7i4Nb%2fXTcC53%2fL%2fs%2fXWUA%2bklof6FwDq7auw%3d%3d" target="_blank">
+                                <i class="ace-icon fa fa-cog bigger-110 blue"></i>
+                                商家CRM
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="font-size:18px;">测试环境</a>
+                </li>
+            </ul>
+            <!-- #section:basics/navbar.dropdown -->
+            <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                <ul class="nav ace-nav">
+
+
+                    <li class="light-blue">
+                        <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                            <span class="user-info">
+                                <small>欢迎您,</small>
+                                admin
+                            </span>
+                            <i class="ace-icon fa fa-caret-down"></i>
+                        </a>
+                        <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                            <li>
+                                <a href="/System/ReSetPassWord">
+                                    <i class="ace-icon fa fa-user"></i>
+                                    修改密码
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/Home/Logout/">
+                                    <i class="ace-icon fa fa-power-off"></i>
+                                    退出
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- /section:basics/navbar.user_menu -->
+                </ul>
+            </div>
+            <!-- /section:basics/navbar.dropdown -->
+        </div>
+    </div>
+
+    <div class="main-container" id="main-container">
+
+        <div id="sidebar" class="sidebar responsive" data-sidebar="true" data-sidebar-scroll="true" data-sidebar-hover="true">
+            <script type="text/javascript">
+                try { ace.settings.check('sidebar', 'fixed') } catch (e) { }
+            </script>
+            <ul class="nav nav-list" style="top: 0px;">
+                <ul class="nav nav-list">
+                    <li class="active ">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-bars blue"></i>
+                            <span class="menu-text"> 商品管理</span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="nav submenu">
+                            <li class="active open">
+                                <a href="/GoodsCenter/Index" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    <span class="menu-text"> 九块九</span>
+                                </a>
+
+                                <b class="arrow"></b>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-toggle ">
+                        <a href="/TagManage/Index" class="">
+                            <i class="menu-icon fa fa-bars blue"></i>
+                            <span class="menu-text"> 标签管理</span>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                    </li>
+                </ul>
+
+            </ul><!-- /.nav-list -->
+            <!-- #section:basics/sidebar.layout.minimize -->
+            <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                <i class="fa-angle-double-left ace-icon fa" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+            </div>
+            <!-- /section:basics/sidebar.layout.minimize -->
+            <script type="text/javascript">
+                try { ace.settings.check('sidebar', 'collapsed') } catch (e) { }
+            </script>
+        </div>
+
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="page-content">
+                    <div class="page-header">
+                        <h1>
+                            添加商品
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-horizontal" role="form" id="form-banner">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label no-padding-right"> 商品标题： </label>
+                                            <div class="col-sm-6">
+                                                <input type="text" id="title" value="" class="col-xs-6 col-sm-6" />
+                                                <span id="alert1" class="red col-xs-9" style="margin-top: 7px;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label no-padding-right"> 商品类型： </label>
+                                            <div class="col-sm-6">
+                                                <select id="productType" class="col-xs-6 col-sm-6">
+                                                    <option value="商品1">商品1</option>
+                                                </select>
+                                                <span id="alert2" class="red col-xs-9" style="margin-top: 7px;"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label no-padding-right"> Party： </label>
+                                            <div class="col-sm-6">
+                                                <select id="productParty" class="col-xs-6 col-sm-6">
+                                                    <option value="News year">new year</option>
+                                                </select>
+                                                <span id="alert3" class="red col-xs-9" style="margin-top: 7px;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label no-padding-right"> Color： </label>
+                                            <div class="col-sm-6">
+                                                <select id="productParty" class="col-xs-6 col-sm-6">
+                                                    <option value="green">green</option>
+                                                </select>
+                                                <span id="alert4" class="red col-xs-9" style="margin-top: 7px;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label no-padding-right"> 图片地址： </label>
+                                            <div class="col-sm-6">
+                                                <input type="file" id="image" class="col-xs-6 col-sm-6" />
+                                                <span id="alert5" class="red col-xs-9" style="margin-top: 7px;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label no-padding-right"> 商品描述： </label>
+                                            <div class="col-sm-6">
+                                                <textarea row="5" id="content1" class="col-xs-6 col-sm-6"></textarea>
+                                                <span id="alert6" class="red col-xs-9" style="margin-top: 7px;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label no-padding-right"> 商品描述2： </label>
+                                            <div class="col-sm-6">
+                                                <textarea row="5" id="content2" class="col-xs-6 col-sm-6"></textarea>
+                                                <span id="alert7" class="red col-xs-9" style="margin-top: 7px;"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix form-actions">
+                                <div class="col-md-offset-4 col-md-6">
+                                    <button class="btn btn-info" type="button" onclick="FH.goodsCenter.addGoods.save()">
+                                        保存
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

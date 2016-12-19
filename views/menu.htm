@@ -1,0 +1,59 @@
+<ul class="list-inline desktop">
+    <% menus.forEach(function(menu) { %>
+    <% if (menu.child == undefined || menu.child.length == 0) { %>
+    <li>
+        <a href="<%=menu.url %>" class=""><span><%=menu.name %></span></a>
+    </li>
+    <% } else { %>
+    <li class="dropdown">
+        <a href="<%=menu.url %>" class=""><span><%=menu.name %></span></a>
+        <ul class="dropdown">
+            <% menu.child.forEach(function(childmenu) { %>
+            <% if (childmenu.child == undefined || childmenu.child.length == 0) { %>
+            <li><a href="<%=childmenu.url %>" class=""><span><%=childmenu.name %></span></a></li>
+            <%} else {%>
+            <li class="dropdown">
+                <a href="<%=childmenu.url %>" class=""><span><%=childmenu.name %></span></a>
+                <ul class="dropdown">
+                    <% childmenu.child.forEach(function(m) { %>
+                    <li><a href="<%=m.url %>" class=""><span><%=m.name %></span></a></li>
+                    <%})%>
+                </ul>
+            </li>
+            <%}%>
+            <% }) %>
+        </ul>
+    </li>
+    <% } %>
+    <% }) %>
+</ul>
+
+<ul class="list-inline tablet">
+    <% menus.forEach(function(menu) { %>
+    <% if (menu.child == undefined || menu.child.length == 0) { %>
+    <li>
+        <a href="/#" data-href="<%=menu.url %>" class="top"><span><%=menu.name %></span></a>
+    </li>
+    <% } else { %>
+    <li class="dropdown">
+        <a href="/#" data-href="<%=menu.url %>" class="top"><span><%=menu.name %></span></a>
+        <ul class="dropdown">
+            <% menu.child.forEach(function(childmenu) { %>
+            <% if (childmenu.child == undefined || childmenu.child.length == 0) { %>
+            <li><a href="<%=childmenu.url %>" class=""><span><%=childmenu.name %></span></a></li>
+            <%} else {%>
+            <li class="dropdown">
+                <a href="<%=childmenu.url %>" class=""><span><%=childmenu.name %></span></a>
+                <ul class="dropdown">
+                    <% childmenu.child.forEach(function(m) { %>
+                    <li><a href="<%=m.url %>" class=""><span><%=m.name %></span></a></li>
+                    <%})%>
+                </ul>
+            </li>
+            <%}%>
+            <% }) %>
+        </ul>
+    </li>
+    <% } %>
+    <% }) %>
+</ul>

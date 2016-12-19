@@ -1,0 +1,21 @@
+<div class="sidebar-offcanvas" id="sidebar_menu">
+  <ul class="mobile_menu list-unstyled">
+    <% menus.forEach(function(menu) { %>
+      <% if(menu.child == undefined || menu.child.length == 0) { %>    
+      <li><a href='<%=menu.url%>'><%=menu.name %></a></li>
+      <% } else { %>
+      <li class="dropdown">
+        <a href="<%=menu.url%>">
+          <span><%=menu.name%></span>
+          <div class="more"><i class="fa fa-chevron-down"></i></div>
+        </a>
+        <ul class="dropdown">
+          <% menu.child.forEach(function(m) { %>
+            <li><a href="<%=m.url%>"><%=m.name%></a></li>
+          <% }) %>
+        </ul> 
+      </li>
+      <% } %>
+    <% }) %>
+  </ul>
+</div>

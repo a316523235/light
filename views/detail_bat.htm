@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%include header.ejs %>
+    <link href="/assets/css/flexslider.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/assets/js/jquery.flexslider-min.js"></script>
+</head>
+<body id="product">
+    <div class="row-offcanvas row-offcanvas-left">
+        <%include menuleft.ejs %>
+        <div class="row-offcanvas-main">
+            <div class="container">
+                <div class="wrapper">
+                    <!-- Begin toolbar -->
+                    <!-- End toolbar -->
+                    <!-- Begin Header -->
+                    <%include header2.ejs %>
+                    <!-- End Header -->
+                    <!-- Begin content-->
+                    <section id="content">
+                        <div id="product" class="led-bulb-teardrop-spiral-led-filament-bulb-4w-2200k">
+
+                            <div class="row">
+
+                                <!-- Begin breadcrumb -->
+                                <div class="col-xs-12">
+                                    <div class="breadcrumb clearfix">
+                                        <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.fatshackvintage.com.au" title="Fat Shack Vintage" itemprop="url"><span itemprop="title">Home</span></a></span>
+                                        <span class="arrow-space">&gt;</span>
+                                        <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+
+                                            <a href="/collections/all" title="All Products">Products</a>
+
+                                        </span>
+                                        <span class="arrow-space">&gt;</span>
+                                        <strong>LED Bulb - Teardrop Spiral LED Filament Bulb 4W 2200K</strong>
+                                    </div>
+                                </div>
+                                <!-- Begin product photos -->
+                                <div class="product_images col-xs-12 col-sm-5 col-md-5">
+                                    <!-- Begin featured image -->
+                                    <div class="product_feature_image with_thumbs">
+                                        <div id="slider" class="flexslider" style="col-xs-12 col-sm-5 col-md-5">
+                                            <ul class="slides">
+                                                <li><img src="/assets/images/sc1.jpg" /></li>
+                                                <li><img src="/assets/images/sc2.jpg" /></li>
+                                                <li><img src="/assets/images/sc3.jpg" /></li>
+                                                <li><img src="/assets/images/sc4.jpg" /></li>
+                                                <li><img src="/assets/images/sc5.jpg" /></li>
+                                                <li><img src="/assets/images/sc6.jpg" /></li>
+                                                <li><img src="/assets/images/sc1.jpg" /></li>
+                                                <li><img src="/assets/images/sc2.jpg" /></li>
+                                                <li><img src="/assets/images/sc3.jpg" /></li>
+                                                <li><img src="/assets/images/sc4.jpg" /></li>
+                                                <li><img src="/assets/images/sc5.jpg" /></li>
+                                                <li><img src="/assets/images/sc6.jpg" /></li>
+                                            </ul>
+                                        </div>
+
+                                        <div id="carousel" class="flexslider carousel" style="col-xs-12 col-sm-5 col-md-5">
+                                            <ul class="slides">
+                                                <li><img src="/assets/images/sc1.jpg" /></li>
+                                                <li><img src="/assets/images/sc2.jpg" /></li>
+                                                <li><img src="/assets/images/sc3.jpg" /></li>
+                                                <li><img src="/assets/images/sc4.jpg" /></li>
+                                                <li><img src="/assets/images/sc5.jpg" /></li>
+                                                <li><img src="/assets/images/sc6.jpg" /></li>
+                                                <li><img src="/assets/images/sc1.jpg" /></li>
+                                                <li><img src="/assets/images/sc2.jpg" /></li>
+                                                <li><img src="/assets/images/sc3.jpg" /></li>
+                                                <li><img src="/assets/images/sc4.jpg" /></li>
+                                                <li><img src="/assets/images/sc5.jpg" /></li>
+                                                <li><img src="/assets/images/sc6.jpg" /></li>
+                                            </ul>
+                                        </div>
+
+                                        <script type="text/javascript">
+                                            $(function () {
+                                                $('#carousel').flexslider({
+                                                    animation: "slide",
+                                                    controlNav: false,
+                                                    animationLoop: false,
+                                                    slideshow: false,
+                                                    itemWidth: 210,
+                                                    itemMargin: 5,
+                                                    asNavFor: '#slider'
+                                                });
+
+                                                $('#slider').flexslider({
+                                                    animation: "slide",
+                                                    controlNav: false,
+                                                    animationLoop: false,
+                                                    slideshow: false,
+                                                    sync: "#carousel"
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                    <!-- End product image -->
+                                </div>
+                                <!-- End product photos -->
+                                <!-- Begin description -->
+                                <div class="col-xs-12 col-sm-7 col-md-7" style="display: none">
+
+                                    <h1 class="title">LED Bulb - Teardrop Spiral LED Filament Bulb 4W 2200K</h1>
+                                    <div class="purchase">
+                                        <h2 class="price" id="price-preview">$45.00</h2>
+                                    </div>
+                                    <h2 class="product_code" style="font-size:14px; color:#999999;">Product Code:  <span class="product_sku">B054-B22</span></h2>
+                                    <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
+
+                                        <!-- Begin product options -->
+                                        <h1 class="title"></h1>
+                                        <div class="product-options">
+
+                                            <div class="select clearfix">
+                                                <label>Base Type</label>
+                                                <div class="selector-wrapper"><select class="single-option-selector" data-option="option1" id="product-select-option-0" style="display: none;"><option value="Bayonet (B22)">Bayonet (B22)</option><option value="Screw in (E27)">Screw in (E27)</option></select><div class="btn-group bootstrap-select single-option-selector" style="width: 134px;"><button type="button" class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown" data-id="product-select-option-0" title="Bayonet (B22)"><span class="filter-option pull-left">Bayonet (B22)</span>&nbsp;<span class="caret"></span></button><div class="dropdown-menu open" style="min-width: 0px;"><ul class="dropdown-menu inner selectpicker" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Bayonet (B22)</span>"><span class="text">Bayonet (B22)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" data-normalized-text="<span class=&quot;text&quot;>Screw in (E27)</span>"><span class="text">Screw in (E27)</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div></div><select id="product-select" name="id" class="form-control" style="display: none;">
+
+                                                    <option selected="selected" value="23391289735">Bayonet (B22) - $45.00</option>
+
+                                                    <option value="23391289799">Screw in (E27) - $45.00</option>
+
+                                                </select>
+                                            </div>
+
+
+                                            <div class="selector-wrapper">
+                                                <label>Quantity</label>
+                                                <input id="quantity" type="number" name="quantity" value="1" class="form-control item-quantity">
+                                            </div>
+
+
+                                            <div class="purchase-section multiple">
+                                                <div class="purchase">
+
+                                                    <input type="submit" id="add-to-cart" class="btn" name="add" value="Add to cart">
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- End product options -->
+
+                                    </form>
+
+                                    <div class="description">
+                                        <p>The latest in LED technology to Australia is this teardrop spiral&nbsp;LED filament bulb.&nbsp;<span>With the new&nbsp;soft filament LED it is now possible to bend the filament in one continuous length&nbsp;to mimic the spiral design. <span>Smart in looks and intelligent in design these LED bulbs use 80% less power than the conventional incandescent bulbs. These LED filament bulbs generate a decent amount of light (as much light as a standard 25W incandescent bulb) with instant 100% light, no warm-up time. These light bulbs look amazing hung low and bare from pendant lights and&nbsp;as they are dimmable you can lower the intensity to further create mood lighting.</span></span></p>
+                                        <p><span>At 4 watts this LED light bulb with spiral&nbsp;LED filament has a&nbsp;very&nbsp;low energy consumption and an extremely long lifespan&nbsp;</span><span>of up to 20,000 hours.&nbsp;T<span>hese teardrop shaped LED bulbs are a statement all alone. Ideal for a wide variety of </span><span class="spvc-e spvc-h">decor lighting</span><span>; from home lighting, cafe lighting, restaurant interiors, office fitouts... anywhere a statement rather than just a light source is required.&nbsp;They are a feature&nbsp;all alone</span><span>!&nbsp;</span></span></p>
+                                        <p><strong>Features include:</strong></p>
+                                        <ul>
+                                            <li>Australian first soft filament LED light bulb</li>
+                                            <li>Dimmable soft LED filament bulb</li>
+                                            <li><span><span>Low energy consumption so environmentally friendly&nbsp;</span></span></li>
+                                            <li>Generates as much light as a standard 25W incandescent bulb</li>
+                                            <li><span>Energy efficient with a &nbsp;long lifespan of 20,000 hours&nbsp;</span></li>
+                                            <li>
+                                                <span style="line-height: 1.5;">Ideal for decor&nbsp;lighting, cafe lighting or&nbsp;</span>commercial<span style="line-height: 1.5;">&nbsp;fitouts</span>
+                                            </li>
+                                            <li><span style="line-height: 1.5;"><span style="line-height: 1.5;"><span style="line-height: 1.5;">Standard Australian fitting</span><br></span></span></li>
+                                        </ul>
+                                        <div>
+                                            <div>We recommend our&nbsp;<a href="http://www.fatshackvintage.com.au/products/long-cage-pendant-light" target="_blank" title="cage pendant light">cage pendant light</a>&nbsp;or our&nbsp;<a href="http://www.fatshackvintage.com.au/products/warehouse-ceiling-pendant-light-large-1" target="_blank" title="warehouse ceiling pendant light">warehouse&nbsp;ceiling pendant light</a>&nbsp;to add that finishing touch.</div>
+                                        </div>
+                                        <p>&nbsp;</p>
+                                        <!-- Standard <ul> with class of "tabs" -->
+                                        <ul class="tabs">
+                                            <!-- Give href an ID value of corresponding
+                                            "tabs-content"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              <li>'s -->
+                                            <li><a class="active" href="#tab1">Description</a></li>
+                                            <li><a href="#tab2">Delivery</a></li>
+                                            <li><a href="#tab3">Returns</a></li>
+                                            <li><a href="#tab4">More Info</a></li>
+                                        </ul>
+                                        <!-- Standard <ul> with class of "tabs-content" -->
+                                        <ul class="tabs-content">
+                                            <!-- Give ID that matches HREF of above anchors -->
+                                            <li id="tab1" class="active">
+                                                <p><b>About the soft LED filament bulb:&nbsp;</b></p>
+                                                <p>Soft LED filament bulbs takes LED technology up a notch; flexible, pliable filaments are now bent into continuous lengths, creating loops of lights without any breaks. This offers an additional artistic factor in the light bulb, making it a great lighting solution for high-end retail stores, cafes and restaurants, as well as beloved private spaces.</p>
+                                                <ul>
+                                                    <li>Wattage: 4 Watt (@ 240V)</li>
+                                                    <li>Equivalent to: 25 Watt&nbsp;</li>
+                                                    <li>Colour Temperature: 2200 Kelvin</li>
+                                                    <li>Light Output: 160&nbsp;Lumens</li>
+                                                    <li>Base Type: Bayonet (B22) / Screw in (E27)</li>
+                                                    <li>
+                                                        Colour:&nbsp;<span>Sunset or Sunrise</span>
+                                                    </li>
+                                                    <li>Beam Angle: 360 Degree</li>
+                                                    <li>Bulb Shape: Edison Teardrop</li>
+                                                    <li>Bulb Finish: Clear</li>
+                                                    <li>Diameter: 60mm</li>
+                                                    <li>Length: 135mm</li>
+                                                    <li>Average Life Hours: 20,000</li>
+                                                    <li>CRI: 90</li>
+                                                    <li>Warranty 1 year</li>
+                                                </ul>
+                                            </li>
+                                            <li id="tab2">
+                                                <p>Fat Shack Vintage delivers Australia wide. From the tip to the tail and all the places in between… if you live in Australia we’ll get it to you</p>
+                                                <ul>
+                                                    <li>For a delivery quote, just select your desired products and proceed to the checkout where you will be able to enter your delivery postcode. It will then calculate the shipping price for your order based on your postcode and the items in your basket before you need to go ahead with the order and enter any personal details.</li>
+                                                    <li>All in stock items will be&nbsp;dispatched&nbsp;from our Melbourne warehouse within 2 business days from receipt of payment.&nbsp;Typical delivery times after&nbsp;dispatch&nbsp;are:<br> * Melbourne - 2-3 business days&nbsp;<br> * Sydney, Canberra, Adelaide - 4-5 business days<br> * Brisbane, Tasmania – 5-6 business days<br> * Darwin, Perth - Approximately 6-7 business days</li>
+                                                    <li>For all areas outside these metro locations please allow an additional 1-3 business days.</li>
+                                                    <li>All orders are sent with tracking and full insurance.&nbsp;</li>
+                                                    <li>Pickups and inspections are available at our&nbsp;Melbourne&nbsp;showroom / warehouse in Melbourne&nbsp;by appointment only. Please&nbsp;<a href="/pages/contact">contact us</a>&nbsp;to arrange.&nbsp;For large / bulky orders, please&nbsp;<a href="/pages/contact">contact us</a>&nbsp;directly for a quotation of postage costs.</li>
+                                                </ul>
+                                            </li>
+                                            <li id="tab3">
+                                                <p>We provide an unconditional return policy on all items purchased from our website. If the item arrives in tip top condition but you decide that you just don’t like it anymore or have changed your mind then please return the items in original, unused, unmarked condition and packaging within 30 days for a full refund less freight.</p>
+                                                <p>Please&nbsp;<a href="/pages/contact">contact us</a>&nbsp;so we know to expect it and return the items to the following address:</p>
+                                                <p>Fat Shack Vintage<br><span>74 Cochranes Road&nbsp;</span><br><span>Moorabbin, VIC 3189</span></p>
+                                                <p>If any items arrive damaged then please notify us within 14 days of delivery. We will of course replace / refund any damaged items at no additional cost to you.</p>
+                                                <p>For more info please see our <a href="/pages/faq">FAQ's</a>.&nbsp;</p>
+                                            </li>
+                                            <li id="tab4">
+                                                <p>Please Note: this listing is for the LED Bulb - Teardrop Spiral LED Filament Bulb 4W 2200K&nbsp;only. The <a href="/collections/lighting/pendant-lights">pendant lights</a> shown in the pictures are for illustration purposes only.&nbsp;</p>
+                                                <p>The light bulb covers are made of glass. Bubbles, lines, slight surface defects, scratches or discolourations are characteristics of all light bulbs. These minor imperfections are not to be considered defects.</p>
+                                                <p>Fat Shack Vintage sells a range of&nbsp;<a href="/collections/lighting/pendant-lights">pendant lights</a>&nbsp;online that compliment our <a href="/collections/light-bulbs">lightbulbs</a>&nbsp;beautifully. We also stock ceiling&nbsp;<a href="/collections/lighting-accessories/pendant-cords">pendant cords</a>&nbsp;so please see these items if you are interested in any of them.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div id="shopify-product-reviews" data-id="7313036359"></div>
+
+
+
+
+
+                                </div>
+                                <!-- End description -->
+                            </div>
+                            <div id="directededge-blocks"></div>
+                        </div>
+                        <!-- Begin related product -->
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

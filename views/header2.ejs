@@ -1,0 +1,78 @@
+<div id="header">
+  <div class="row">
+    <!-- Begin right navigation -->
+    <!-- End right navigation -->
+    <!-- Begin below navigation -->
+    <div class="col-lg-6 col-md-5 col-sm-5">
+      <div class="logo">
+        <a href="/">
+          <img src="/images/logo.png" alt="Fat Shack Vintage">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-7 col-sm-7">
+      <div class="toolbar">
+        <ul class="list-inline">
+          <!--
+          <li>
+            <a href="/account/login" id="customer_login_link">My Account</a>
+          </li>
+          <li>
+            <a id="shopping-cart-nav" href="/cart" class="cart" title="Shopping Cart">
+              <span class="icon-cart">
+                <img src="./Vintage_files/cart.png" alt="Cart"> 
+              </span>Shopping Cart: <span id="top-cart-items">0</span><div class="icon-arrow" style="display:none;"></div>
+            </a>
+          </li>
+          <li style="display:none;">
+            <a href="/cart" class="top-checkout-link" title="Checkout">Checkout</a>
+          </li>
+          -->
+          <li class="search-field hidden-xs">
+            <form class="search" action="/search">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-search"></i>
+                </span>
+                <input type="text" name="q" class="form-control" placeholder="Search" value="" x-webkit-speech="">
+                                                </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <section id="nav">
+        <nav class="main hidden-xs">
+          <% include menu.ejs %>          
+        </nav>
+        <!-- /.main -->
+        <nav class="mobile visible-xs">
+          <div class="row">
+            <div class="col-xs-2">
+              <a style="padding-top:3px; display:block;" href="/#" data-toggle="offcanvas">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+            <div class="col-xs-10">
+              <form class="search mobile-search" action="/search">
+                <div class="input-group">
+                  <input type="text" name="q" class="form-control" placeholder="Search" value="" x-webkit-speech="">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </span>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <!-- /.mobile -->
+      </section>
+    </div>
+    <!-- End below navigation -->
+  </div>
+</div>
