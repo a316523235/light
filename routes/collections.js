@@ -5,6 +5,13 @@ var router = express.Router();
 var menu = require('../bll/menu.js');
 var menuObj = new menu();
 
+router.get('/list/:type', function(req, res, next) {
+  var type = req.params.type || '';
+  var q = req.query.q || 'all';
+  var newUrl = '/collections/list/' + type + '/' + q;
+  res.redirect(newUrl);
+});
+
 router.get('/list/:type/:type2', function(req, res, next) {
   var type = req.params.type || '';
   var type2 = req.params.type2 || '';
@@ -15,6 +22,9 @@ router.get('/list/:type/:type2', function(req, res, next) {
     case '':
       break;
     case 'all': case 'News': case 'Products': case 'Showing':
+      break;
+    case 'title':
+      where += " and {0} like '%{1}%' ".replace('{0}', type).replace('{1}', type2);
       break;
     default :
       if(type2 == 'all') {

@@ -26,11 +26,11 @@
                                 <%lstProduct.forEach(function(product) { %>
                                 <div class="product col-xs-6  col-sm-3 col-md-2">
                                     <div class="image">
-                                        <a href="https://www.fatshackvintage.com.au/products/station-pendant-light">
+                                        <a href="/collections/detail/id/<%=product.id%>">
                                             <img src="/uploads/<%=product.image%>" alt="Copper Station Pendant Light matt copper finish">
                                         </a>
                                         <div class="details">
-                                            <a href="https://www.fatshackvintage.com.au/products/station-pendant-light" class="clearfix">
+                                            <a href="/collections/detail/id/<%=product.id%>" class="clearfix">
                                                 <h4 class="title"><%=product.title%></h4>
                                             </a>
                                         </div>
