@@ -24,7 +24,6 @@
 
                                 <!-- Begin breadcrumb -->
                                 <div class="col-xs-12">
-                                    <!--
                                     <div class="breadcrumb clearfix">
                                         <span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.fatshackvintage.com.au" title="Fat Shack Vintage" itemprop="url"><span itemprop="title">Home</span></a></span>
                                         <span class="arrow-space">&gt;</span>
@@ -36,22 +35,74 @@
                                         <span class="arrow-space">&gt;</span>
                                         <strong>LED Bulb - Teardrop Spiral LED Filament Bulb 4W 2200K</strong>
                                     </div>
-                                    -->
                                 </div>
                                 <!-- Begin product photos -->
-                                <div class="product_images col-xs-12 ccol-sm-5 col-md-5">
+                                <div class="product_images col-xs-12 col-xs-5 col-xs-5">
                                     <!-- Begin featured image -->
-                                    <%product.bigimage.split(',').forEach(function(n) {%>
-                                    <div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom: 5px;">
-                                        <img src="/uploads/<%=n%>" class="col-xs-12 col-sm-12 col-md-12" />
+                                    <div class="product_feature_image with_thumbs">
+                                        <div id="slider" class="flexslider" style="col-xs-12 col-sm-5 col-md-5">
+                                            <ul class="slides">
+                                                <li><img src="/assets/images/sc1.jpg" /></li>
+                                                <li><img src="/assets/images/sc2.jpg" /></li>
+                                                <li><img src="/assets/images/sc3.jpg" /></li>
+                                                <li><img src="/assets/images/sc4.jpg" /></li>
+                                                <li><img src="/assets/images/sc5.jpg" /></li>
+                                                <li><img src="/assets/images/sc6.jpg" /></li>
+                                                <li><img src="/assets/images/sc1.jpg" /></li>
+                                                <li><img src="/assets/images/sc2.jpg" /></li>
+                                                <li><img src="/assets/images/sc3.jpg" /></li>
+                                                <li><img src="/assets/images/sc4.jpg" /></li>
+                                                <li><img src="/assets/images/sc5.jpg" /></li>
+                                                <li><img src="/assets/images/sc6.jpg" /></li>
+                                            </ul>
+                                        </div>
+
+                                        <div id="carousel" class="flexslider carousel" style="col-xs-12 col-sm-5 col-md-5">
+                                            <ul class="slides">
+                                                <li><img src="/assets/images/sc1.jpg" /></li>
+                                                <li><img src="/assets/images/sc2.jpg" /></li>
+                                                <li><img src="/assets/images/sc3.jpg" /></li>
+                                                <li><img src="/assets/images/sc4.jpg" /></li>
+                                                <li><img src="/assets/images/sc5.jpg" /></li>
+                                                <li><img src="/assets/images/sc6.jpg" /></li>
+                                                <li><img src="/assets/images/sc1.jpg" /></li>
+                                                <li><img src="/assets/images/sc2.jpg" /></li>
+                                                <li><img src="/assets/images/sc3.jpg" /></li>
+                                                <li><img src="/assets/images/sc4.jpg" /></li>
+                                                <li><img src="/assets/images/sc5.jpg" /></li>
+                                                <li><img src="/assets/images/sc6.jpg" /></li>
+                                            </ul>
+                                        </div>
+
+                                        <script type="text/javascript">
+                                            $(function () {
+                                                $('#carousel').flexslider({
+                                                    animation: "slide",
+                                                    controlNav: false,
+                                                    animationLoop: false,
+                                                    slideshow: false,
+                                                    itemWidth: 115,
+                                                    itemMargin: 5,
+                                                    asNavFor: '#slider'
+                                                });
+
+                                                $('#slider').flexslider({
+                                                    animation: "slide",
+                                                    controlNav: false,
+                                                    animationLoop: false,
+                                                    slideshow: false,
+                                                    sync: "#carousel"
+                                                });
+                                            });
+                                        </script>
                                     </div>
-                                    <%})%>
                                     <!-- End product image -->
                                 </div>
                                 <!-- End product photos -->
                                 <!-- Begin description -->
                                 <div class="col-xs-12 col-sm-7 col-md-7">
-                                    <h1 class="title"><%=product.title%></h1>
+
+                                    <h1 class="title">LED Bulb - Teardrop Spiral LED Filament Bulb 4W 2200K</h1>
                                     
                                     <!--<div class="purchase">
                                         <h2 class="price" id="price-preview">$45.00</h2>
@@ -59,15 +110,8 @@
                                     <h2 class="product_code" style="font-size:14px; color:#999999;">Product Code:  <span class="product_sku">B054-B22</span></h2>-->
                                     
                                     <div class="product-options">
-                                        <%if (product.lights) {%>
-                                            <h2 class="product_code" style="font-size:14px; color:#999999; "><span style="text-indent: 1em;">Type: </span><span class="product_sku"><%=product.lights%></span></h2>
-                                        <%}%>
-                                        <%if (product.party) {%>
-                                            <h2 class="product_code" style="font-size:14px; color:#999999;">Theme:  <span class="product_sku"><%=product.party%></span></h2>
-                                        <%}%>
-                                        <%if (product.color) {%>
-                                            <h2 class="product_code" style="font-size:14px; color:#999999;">Color:  <span class="product_sku"><%=product.color%></span></h2>
-                                        <%}%>
+                                        <h2 class="product_code" style="font-size:14px; color:#999999;">Color:  <span class="product_sku">Green</span></h2>
+                                        <h2 class="product_code" style="font-size:14px; color:#999999;">Party:  <span class="product_sku">New Years</span></h2>
                                     </div>
 
                                     <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
@@ -126,7 +170,7 @@
                                             <li><span style="line-height: 1.5;"><span style="line-height: 1.5;"><span style="line-height: 1.5;">Standard Australian fitting</span><br></span></span></li>
                                         </ul>
                                         <div>
-                                            <div>We recommend our&nbsp;<a href="/" target="_blank" title="cage pendant light">cage pendant light</a>&nbsp;or our&nbsp;<a href="/" target="_blank" title="warehouse ceiling pendant light">warehouse&nbsp;ceiling pendant light</a>&nbsp;to add that finishing touch.</div>
+                                            <div>We recommend our&nbsp;<a href="http://www.fatshackvintage.com.au/products/long-cage-pendant-light" target="_blank" title="cage pendant light">cage pendant light</a>&nbsp;or our&nbsp;<a href="http://www.fatshackvintage.com.au/products/warehouse-ceiling-pendant-light-large-1" target="_blank" title="warehouse ceiling pendant light">warehouse&nbsp;ceiling pendant light</a>&nbsp;to add that finishing touch.</div>
                                         </div>
                                         <p>&nbsp;</p>
                                         <!-- Standard <ul> with class of "tabs" -->

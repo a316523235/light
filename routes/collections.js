@@ -98,6 +98,10 @@ router.get('/detail/:type/:type2', function(req, res, next) {
         res.json({ code: 500, msg: "操作失败", err: err });
     }
     if(result) {
+      if(result.length == 0) {
+        res.redirect('/');
+        return;
+      }
       date = result;
       connection.query(sqlcount, function(err2, result2, feilds2) {
         if(err2) {
@@ -106,7 +110,7 @@ router.get('/detail/:type/:type2', function(req, res, next) {
         }
         if(result2) {
           connection.end();
-          var jsn = { code: 200, msg: '操作成功', title: 'Express', name: 'Ice', menus: menuObj.menus, type: type, type2: type2, total: result2[0].total, lstProduct: date, query: sqldate, page: page, pagesize: pagesize };
+          var jsn = { code: 200, msg: '操作成功', title: 'Express', name: 'Ice', menus: menuObj.menus, type: type, type2: type2, total: result2[0].total, product: date[0], query: sqldate, page: page, pagesize: pagesize };
           res.render('detail', jsn);
           //res.json(jsn);
         }
