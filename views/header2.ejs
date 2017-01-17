@@ -52,7 +52,7 @@
         <nav class="mobile visible-xs">
           <div class="row">
             <div class="col-xs-2">
-              <a style="padding-top:3px; display:block;" href="/#" data-toggle="offcanvas">
+              <a style="padding-top:3px; display:block;" href="/#" data-toggle="offcanvas" id="mobileMenuBtn">
                 <i class="fa fa-bars"></i>
               </a>
             </div>
@@ -70,6 +70,19 @@
             </div>
           </div>
         </nav>
+        <script>
+          $(function() {
+            $("#mobileMenuBtn").click(function() {
+              $("div.row-offcanvas.row-offcanvas-left").toggleClass("active");
+            });
+            $("#mobileMenuBtn").blur(function() {
+              $("div.row-offcanvas.row-offcanvas-left").removeClass("active");
+            });
+            //$(".row-offcanvas-main").click(function() {
+            //  $("div.row-offcanvas.row-offcanvas-left").removeClass("active");
+            //});
+          });
+        </script>
         <!-- /.mobile -->
       </section>
     </div>

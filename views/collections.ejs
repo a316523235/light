@@ -35,11 +35,36 @@
                                 <%}) %>
                             <%} %>
                             </div>
+                            <div id="paged"></div>
                         </div>
                     </section>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $(function() {
+            var options = {
+                        bootstrapMajorVersion: 2, //版本
+                        currentPage: <%lstProduct.page%>, //当前页数
+                        totalPages: 10, //总页数
+                        itemTexts: function (type, page, current) {
+                            switch (type) {
+                                case "first":
+                                    return "首页";
+                                case "prev":
+                                    return "上一页";
+                                case "next":
+                                    return "下一页";
+                                case "last":
+                                    return "末页";
+                                case "page":
+                                    return page;
+                            }
+                        }
+                    };
+            $('#paged').bootstrapPaginator(options);
+        });
+    </script>
 </body>
 </html>
