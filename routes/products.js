@@ -7,7 +7,7 @@ router.get('/list/:type/:type2', function(req, res, next) {
   var type = req.params.type || '';
   var type2 = req.params.type2 || '';
   var page = req.query.page || '1';
-  var pagesize = req.query.pagesize || '12';
+  var pagesize = req.query.pagesize || '18';
   var where = ' where 1=1 ';
   switch(type) {
     case '':
