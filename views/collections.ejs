@@ -81,6 +81,13 @@
                                 case "page":
                                     return page;
                             }
+                        },
+                        pageUrl: function(type, page, current){
+                            if (page==current) {
+                                return "javascript:void(0)";
+                            } else {
+                                return "?pageSize=15&pageIndex="+page;
+                            }
                         }
                     };
             $('#paged').bootstrapPaginator(options);
