@@ -2,6 +2,26 @@
 <html>
 <head>
     <%include header.ejs %>
+    <style type="text/css">
+        #paged { float: right; margin-right: 3%; }
+        #paged ul li { display: inline; margin: 5px; }
+        #paged ul li a { 
+            cursor: pointer; 
+            border-width: 1px;
+            border-color: #d4dfe3;
+            border-radius: 0 !important;
+            border:1px solid #ddd;
+            color: #2283c5;
+            background-color: #fafafa;
+            padding:7px 10px;
+        }
+        #paged ul li.active a {
+            color: #393939;
+            text-decoration: none;
+        }
+
+        #qrCode { top: 33%; right: 5%; width: 100px; position: fixed; }
+    </style>
 </head>
 <body id="index">
     <div class="row-offcanvas row-offcanvas-left">
@@ -46,8 +66,8 @@
         $(function() {
             var options = {
                         bootstrapMajorVersion: 2, //版本
-                        currentPage: <%lstProduct.page%>, //当前页数
-                        totalPages: 10, //总页数
+                        currentPage: <%=page%>, //当前页数
+                        totalPages: Math.ceil(<%=total/pagesize%>), //总页数
                         itemTexts: function (type, page, current) {
                             switch (type) {
                                 case "first":
