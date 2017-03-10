@@ -86,7 +86,7 @@
                             if (page==current) {
                                 return "javascript:void(0)";
                             } else {
-                                return "?pageSize=15&pageIndex="+page;
+                                return "?page=" + page + "&pagesize=<%=pagesize%>";
                             }
                         }
                     };

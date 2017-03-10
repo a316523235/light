@@ -35,7 +35,7 @@ router.get('/list/:type/:type2', function(req, res, next) {
       break;     
   }  
 
-  var limit = ' limit {0},{1}'.replace('{0}', page*pagesize-pagesize).replace('{1}', page*pagesize);
+  var limit = ' limit {0},{1}'.replace('{0}', page*pagesize-pagesize).replace('{1}', pagesize);
   var sqlcount = "select count(id) as total from product " + where;
   var sqldate = "select * from product " + where + ' order by createdate desc ' + limit;
   
@@ -85,7 +85,7 @@ router.get('/detail/:type/:type2', function(req, res, next) {
       break;     
   }  
 
-  var limit = ' limit {0},{1}'.replace('{0}', page*pagesize-pagesize).replace('{1}', page*pagesize);
+  var limit = ' limit {0},{1}'.replace('{0}', page*pagesize-pagesize).replace('{1}', pagesize);
   var sqlcount = "select count(id) as total from product " + where;
   var sqldate = "select * from product " + where + ' order by createdate desc ' + limit;
   
