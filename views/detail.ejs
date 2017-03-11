@@ -68,6 +68,12 @@
                                         <%if (product.color) {%>
                                             <h2 class="product_code" style="font-size:14px; color:#999999;">Color:  <span class="product_sku"><%=product.color%></span></h2>
                                         <%}%>
+                                        <%if (product.content1) {%>
+                                            <h2 class="product_code" style="font-size:14px; color:#999999;">Description:  <span class="product_sku"><%=product.content1%></span></h2>
+                                        <%}%>
+                                        <%if (product.content2) {%>
+                                            <h2 class="product_code" style="font-size:14px; color:#999999;">Detail:  <span class="product_sku"><%=product.content2%content2></span></h2>
+                                        <%}%>
                                     </div>
 
                                     <form id="add-item-form" action="/cart/add" method="post" class="variants clearfix">
